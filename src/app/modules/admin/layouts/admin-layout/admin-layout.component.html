@@ -1,9 +1,11 @@
 <!-- component -->
 <div class="min-h-screen bg-gray-50/50">
     <lib-vass-side-menu
+    title="Coppel"
+    subTitle = "SA"
     [isAuthenticated]="isAuthenticated()"
     (signIn)="onLogin()"
-    [titleColor]="TitleColor.blue"
+    [titleColor]="TitleColor.red"
     (signOut)="onLogout()"
     />
     
