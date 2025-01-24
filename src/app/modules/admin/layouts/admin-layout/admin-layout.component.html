@@ -1,9 +1,10 @@
 <!-- component -->
 <div class="min-h-screen bg-gray-50/50">
-    <side-menu 
+    <lib-vass-side-menu
     [isAuthenticated]="isAuthenticated()"
-    (onSignIn)="onLogin()"
-    (onSignOut)="onLogout()"
+    (signIn)="onLogin()"
+    [titleColor]="TitleColor.blue"
+    (signOut)="onLogout()"
     />
     
     <div class="p-4 xl:ml-80">

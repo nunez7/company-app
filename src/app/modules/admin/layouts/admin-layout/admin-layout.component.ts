@@ -1,17 +1,19 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SideMenuComponent } from "../../../shared/components/side-menu/side-menu.component";
+import { TitleColor, VassSideMenuComponent } from 'vass-side-menu';
 
 @Component({
   selector: 'app-admin-layout',
   standalone: true,
-  imports: [RouterOutlet, SideMenuComponent],
+  imports: [RouterOutlet, VassSideMenuComponent],
   templateUrl: './admin-layout.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class AdminLayoutComponent {
 
   isAuthenticated = signal(false);
+
+  TitleColor = TitleColor;
 
   onLogin(){
     this.isAuthenticated.set(true);
